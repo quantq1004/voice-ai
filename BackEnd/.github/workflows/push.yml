@@ -1,0 +1,13 @@
+name: Push
+
+on:
+  push:
+    branches-ignore:
+      - master
+
+jobs:
+  continuous-integration:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
