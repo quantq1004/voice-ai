@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { Typography, Box, Avatar } from '@mui/material';
 import QRCode from 'qrcode.react';
-import LogoAIVoice from '@src/assets/logo/logo-aivoice.png';
+import LogoAIVoice from '@src/assets/logo/call.png';
 import { CRM_URL } from '@src/configs';
 import { getCategoryLabel } from '@src/services/voiceCloning';
 import { StyledQRVoiceRecordingDialog } from './index.style';
@@ -13,8 +13,7 @@ const QRVoiceRecordingDialog = ({ open, onClose }) => {
   const { voice: voiceRecording } = useSelector(
     (state) => state.voiceVoiceCloning,
   );
-
-  const urlToShow = `${CRM_URL}/studio/voice-cloning/voices/${voiceRecording.id}?isAdvertisement=true`;
+  const urlToShow = `${CRM_URL}/voices/${voiceRecording.id}?isAdvertisement=true`;
 
   return (
     <StyledQRVoiceRecordingDialog open={open} onClose={onClose}>
