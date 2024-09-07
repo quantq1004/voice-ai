@@ -1,114 +1,346 @@
-export const COLOR = {
-  black: '#000000',
-  white: '#FFFFFF',
-  gray: {
-    100: '#F7FAFC',
-    200: '#EDF2F7',
-    300: '#E2E8F0',
-    400: '#CBD5E0',
-    500: '#A0AEC0',
-    600: '#718096',
-    700: '#4A5568',
-    800: '#2D3748',
-    900: '#1A202C',
+const COLOR = {
+  white: '#ffffff',
+  background: '#f8f8f8',
+  divider: '#e9ecef',
+  lightDivider: '#b9b9c3',
+  text: '#242424',
+  subText: '#6e6b7b',
+  lightText: '#787878',
+  blue: '#0061AF',
+  labelBlue: '#117EEF',
+  danger: '#ea5455',
+  purple: '#8b78cd',
+  lightGreen: '#4eb081',
+  lightBlue: '#2279c9',
+  orange: '#ff9f43',
+  red: '#fe0303',
+  darkRed: '#7a211b',
+  darkBlue: '#1e164e',
+  skyBlue: '#bfd9ff',
+  paleBlue: '#e6f7ff',
+  alert: '#ff9500',
+
+  primary: '#ffd60a',
+  success: '#52C41A',
+  error: '#fe0303',
+  warning: '#faad14',
+  info: '#1890FF',
+  dark: '#4b4b4b',
+  light: '#babfc7',
+  gray: '#E9E9E9',
+  charcoal: '#f4f5f7',
+  darkGray: '#1C1C1E',
+  blueV2: '#007AFF',
+
+  boldSuccess: '#00A442',
+  button: 'rgba(0, 0, 0, 0.54)',
+  disableButton: 'rgba(0, 0, 0, 0.26)',
+  primary40: 'rgba(255, 214, 10, 0.40)',
+
+  bluev2: {
+    10: 'rgba(0, 122, 255, 0.1)',
+    16: 'rgba(0, 122, 255, 0.16)',
+    100: 'rgba(0, 122, 255, 1)',
   },
-  red: {
-    100: '#FFF5F5',
-    200: '#FED7D7',
-    300: '#FEB2B2',
-    400: '#FC8181',
-    500: '#F56565',
-    600: '#E53E3E',
-    700: '#C53030',
-    800: '#9B2C2C',
-    900: '#742A2A',
+
+  secondary: {
+    old: '#4b4b4b',
+    80: 'rgba(30, 22, 78, 0.08)',
+    60: 'rgba(30, 22, 78, 0.06)',
+    40: 'rgba(30, 22, 78, 0.04)',
+    8: 'rgba(30, 22, 78, 0.8)',
+    16: 'rgba(30, 22, 78, 0.16)',
+    24: 'rgba(30, 22, 78, 0.24)',
+    32: 'rgba(30, 22, 78, 0.32)',
+    64: 'rgba(30, 22, 78, 0.64)',
+    100: 'rgba(30, 22, 78, 1)',
   },
-  orange: {
-    100: '#FFFAF0',
-    200: '#FEEBC8',
-    300: '#FBD38D',
-    400: '#F6AD55',
-    500: '#ED8936',
-    600: '#DD6B20',
-    700: '#C05621',
-    800: '#9C4221',
-    900: '#7B341E',
+
+  black: {
+    default: '#000000',
+    8: 'rgba(0, 0, 0, 0.08)',
+    16: 'rgba(0, 0, 0, 0.16)',
+    24: 'rgba(0, 0, 0, 0.24)',
+    30: 'rgba(0, 0, 0, 0.30)',
+    32: 'rgba(0, 0, 0, 0.32)',
+    48: 'rgba(0, 0, 0, 0.48)',
+    64: 'rgba(0, 0, 0, 0.64)',
+    80: 'rgba(0, 0, 0, 0.8)',
   },
-  yellow: {
-    100: '#FFFFF0',
-    200: '#FEFCBF',
-    300: '#FAF089',
-    400: '#F6E05E',
-    500: '#ECC94B',
-    600: '#D69E2E',
-    700: '#B7791F',
-    800: '#975A16',
-    900: '#744210',
-  },
-  green: {
-    100: '#F0FFF4',
-    200: '#C6F6D5',
-    300: '#9AE6B4',
-    400: '#68D391',
-    500: '#48BB78',
-    600: '#38A169',
-    700: '#2F855A',
-    800: '#276749',
-    900: '#22543D',
-  },
-  teal: {
-    100: '#E6FFFA',
-    200: '#B2F5EA',
-    300: '#81E6D9',
-    400: '#4FD1C5',
-    500: '#38B2AC',
-    600: '#319795',
-    700: '#2C7A7B',
-    800: '#285E61',
-    900: '#234E52',
-  },
-  blue: {
-    100: '#EBF8FF',
-    200: '#BEE3F8',
-    300: '#90CDF4',
-    400: '#63B3ED',
-    500: '#4299E1',
-    600: '#3182CE',
-    700: '#2B6CB0',
-    800: '#2C5282',
-    900: '#2A4365',
-  },
+
   indigo: {
-    100: '#EBF4FF',
-    200: '#C3DAFE',
-    300: '#A3BFFA',
-    400: '#7F9CF5',
-    500: '#667EEA',
-    600: '#5A67D8',
-    700: '#4C51BF',
-    800: '#434190',
-    900: '#3C366B',
+    default: '#1E164E',
+    4: 'rgb(30, 22, 78, 0.04)',
+    8: 'rgba(30, 22, 78, 0.08)',
+    32: 'rgba(30, 22, 78, 0.32)',
+    64: 'rgba(30, 22, 78, 0.64)',
+    80: 'rgba(30, 22, 78, 0.80)',
+    100: 'rgba(30, 22, 78, 1)',
   },
-  purple: {
-    100: '#FAF5FF',
-    200: '#E9D8FD',
-    300: '#D6BCFA',
-    400: '#B794F4',
-    500: '#9F7AEA',
-    600: '#805AD5',
-    700: '#6B46C1',
-    800: '#553C9A',
-    900: '#44337A',
+
+  label: {
+    8: 'rgba(60, 60, 67, 0.08)',
+    16: 'rgba(60, 60, 67, 0.16)',
+    64: 'rgba(60, 60, 67, 0.64)',
+    80: 'rgba(60, 60, 67, 0.80)',
+    100: 'rgba(60, 60, 67, 1)',
   },
-  pink: {
-    100: '#FFF5F7',
-    200: '#FED7E2',
-    300: '#FBB6CE',
-    400: '#F687B3',
-    500: '#ED64A6',
-    600: '#D53F8C',
-    700: '#B83280',
-    800: '#97266D',
-    900: '#702459',
+
+  label2: {
+    100: 'rgba(28, 28, 30, 1)',
   },
+
+  functionalRed: {
+    default: '#ff3b30',
+    32: 'rgba(255, 59, 48, 0.32)',
+    8: 'rgba(255, 59, 48, 0.08)',
+  },
+
+  functionYellow: {
+    default: '#FFCC00',
+    16: 'rgba(255, 204, 0, 0.16)',
+    64: 'rgba(255, 204, 0, 0.64)',
+    100: 'rgba(255, 204, 0, 1)',
+  },
+
+  yellow: {
+    default: '#FFD60A',
+    64: 'rgba(255, 214, 10, 0.64)',
+    32: 'rgba(255, 214, 10, 0.32)',
+    16: 'rgba(255, 214, 10, 0.16)',
+    8: 'rgba(255, 214, 10, 0.08)',
+  },
+
+  darkV2: {
+    default: '#3C3C43',
+    8: 'rgba(60, 60, 67, 0.08)',
+    16: 'rgba(60, 60, 67, 0.16)',
+    32: 'rgba(60, 60, 67, 0.32)',
+    60: 'rgba(60, 60, 67, 0.60)',
+    64: 'rgba(60, 60, 67, 0.64)',
+    80: 'rgba(60, 60, 67, 0.80)',
+  },
+
+  grayV2: {
+    100: 'rgba(237, 237, 241)',
+  },
+
+  whiteV2: {
+    default: '#FFFFFF',
+    64: 'rgba(255, 255, 255, 0.64)',
+  },
+
+  greenV2: {
+    default: '#34c759',
+    8: 'rgba(52, 199, 89, 0.08)',
+  },
+
+  purpleV2: {
+    default: '#6746F5',
+    10: 'rgba(103, 70, 245, 0.1)',
+    30: 'rgba(103, 70, 245, 0.5)',
+  },
+};
+
+const TRANSPARENT_COLOR = {
+  primary: 'rgba(255, 214, 10, 0.20)',
+  secondary: 'rgba(108, 117, 125, 0.05)',
+  success: 'rgba(40, 199, 111, 0.12)',
+  error: 'rgba(234, 84, 85, 0.12)',
+  warning: 'rgba(255, 225, 67, 0.12)',
+  info: 'rgba(0, 207, 232, 0.12)',
+  dark: 'rgba(30, 30, 30, 0.05)',
+  light: 'rgba(186, 191, 199, 0.12)',
+  lightOrange: 'rgba(252, 102, 52, 0.25)',
+  red: 'rgb(254, 3, 3, 0.12)',
+  darkBlue: 'rgba(30, 22, 78, 0.32)',
+  borderGray: 'rgba(60, 60, 67, 0.16)',
+  bgrGray: 'rgba(30, 22, 78, 0.04)',
+  alert: 'rgba(255, 149, 0, 0.08)',
+};
+
+const GRADIENT_COLOR = {
+  primary: 'linear-gradient(45deg, #fc6634 0%, #fe506a 100%)',
+  secondary: 'linear-gradient(45deg, #82868b 0%, #9ca0a4 100%)',
+  success:
+    'linear-gradient(45.79deg, #28c76f 0%, #48da89 94.75%, #48da89 94.75%)',
+  error: 'linear-gradient(43.96deg, #ea5455 2.91%, #f08182 94.71%)',
+  warning: 'linear-gradient(41.83deg, #ffe143 2.18%, #ffbc0e 97.5%)',
+  info: 'linear-gradient(45deg, #00cfe8 0%, #1ce7ff 100%)',
+  dark: 'linear-gradient(48.35deg, #4b4b4b 0%, #787878 94.43%)',
+  orange: 'linear-gradient(to right, #ffca44 9.97%, #ff9920 97.59%)',
+  darkBlue: 'linear-gradient(to right, #1e164e 9.97%, #1e164e 97.59%)',
+  orangeRed: 'linear-gradient(212.33deg, #fc6634 -2.88%, #fc9434 103.36%)',
+};
+
+const LINEAR_COLOR = {
+  info: {
+    text: 'rgba(0, 122, 255, 1)',
+    background: 'rgba(50, 173, 230, 0.08)',
+    linear: 'rgba(0, 122, 255, 0.16)',
+  },
+};
+
+const CONTAINED_BUTTON_COLOR = {
+  primary: {
+    hover: '#FFE66C',
+    active: '#ffe86d',
+    focus: '#ffe86d',
+  },
+  secondary: {
+    hover: '#4a4a4a',
+    active: '#242424',
+    focus: '#75797e',
+  },
+  success: {
+    hover: '#28c76f',
+    active: '#24b263',
+    focus: '#24b263',
+  },
+  error: {
+    hover: '#ea5455',
+    active: '#e73d3e',
+    focus: '#e73d3e',
+  },
+  warning: {
+    hover: '#ffe86d',
+    active: '#ffe143',
+    focus: '#ffd600',
+  },
+  info: {
+    hover: '#00cfe8',
+    active: '#00b8cf',
+    focus: '#00b8cf',
+  },
+  dark: {
+    hover: '#4b4b4b',
+    active: '#343434',
+    focus: '#343434',
+  },
+};
+
+const OUTLINED_BUTTON_COLOR = {
+  primary: {
+    hover: 'rgba(30, 22, 78, 0.1)',
+    active: 'rgba(30, 22, 78, 0.1)',
+    focus: 'rgba(30, 22, 78, 0.1)',
+  },
+  secondary: {
+    hover: 'rgba(108, 117, 125, 0.04)',
+    active: 'rgba(108, 117, 125, 0.1)',
+    focus: 'rgba(108, 117, 125, 0.2)',
+  },
+  success: {
+    hover: 'rgba(40, 199, 111, 0.04)',
+    active: 'rgba(40, 199, 111, 0.2)',
+    focus: 'rgba(40, 199, 111, 0.2)',
+  },
+  error: {
+    hover: 'rgba(234, 84, 85, 0.04)',
+    active: 'rgba(234, 84, 85, 0.2)',
+    focus: 'rgba(234, 84, 85, 0.2)',
+  },
+  warning: {
+    hover: 'rgba(255, 225, 67, 0.04)',
+    active: 'rgba(255, 225, 67, 0.2)',
+    focus: 'rgba(255, 225, 67, 0.2)',
+  },
+  info: {
+    hover: 'rgba(0, 207, 232, 0.04)',
+    active: 'rgba(0, 207, 232, 0.2)',
+    focus: 'rgba(0, 207, 232, 0.2)',
+  },
+  dark: {
+    hover: 'rgba(30, 30, 30, 0.04)',
+    active: 'rgba(30, 30, 30, 0.2)',
+    focus: 'rgba(30, 30, 30, 0.2)',
+  },
+};
+
+const TEXT_BUTTON_COLOR = {
+  primary: {
+    hover: 'rgba(30, 22, 78, 0.1)',
+    active: 'rgba(30, 22, 78, 0.1)',
+    focus: 'rgba(30, 22, 78, 0.1)',
+  },
+  secondary: {
+    hover: 'rgba(108, 117, 125, 0.12)',
+    active: 'rgba(108, 117, 125, 0.2)',
+    focus: 'rgba(108, 117, 125, 0.2)',
+  },
+  success: {
+    hover: 'rgba(40, 199, 111, 0.12)',
+    active: 'rgba(40, 199, 111, 0.2)',
+    focus: 'rgba(40, 199, 111, 0.2)',
+  },
+  error: {
+    hover: 'rgba(234, 84, 85, 0.12)',
+    active: 'rgba(234, 84, 85, 0.2)',
+    focus: 'rgba(234, 84, 85, 0.2)',
+  },
+  warning: {
+    hover: 'rgba(255, 225, 67, 0.12)',
+    active: 'rgba(255, 225, 67, 0.2)',
+    focus: 'rgba(255, 225, 67, 0.2)',
+  },
+  info: {
+    hover: 'rgba(0, 207, 232, 0.12)',
+    active: 'rgba(0, 207, 232, 0.2)',
+    focus: 'rgba(0, 207, 232, 0.2)',
+  },
+  dark: {
+    hover: 'rgba(75, 75, 75, 0.12)',
+    active: 'rgba(75, 75, 75, 0.2)',
+    focus: 'rgba(75, 75, 75, 0.2)',
+  },
+};
+
+const GRADIENT_BUTTON_COLOR = {
+  primary: {
+    hover: 'linear-gradient(46.62deg,#ff4000 0%, #ff2647; 93.64%)',
+    active: 'linear-gradient(45deg, #fc6634 0%, #fe506a 100%)',
+    focus: 'linear-gradient(45deg, #ff3d06 0%, #ff0026 100%)',
+  },
+  secondary: {
+    hover: 'linear-gradient(45deg, #82868b 0%, #9ca0a4 100%)',
+    active: 'linear-gradient(47.52deg, #696d71 0%, #82868b 95.97%)',
+    focus: 'linear-gradient(47.52deg, #696d71 0%, #82868b 95.97%)',
+  },
+  success: {
+    hover:
+      'linear-gradient(46.82deg, #28c76f 0%, #48da89 93.46%, #48da89 93.46%)',
+    active: 'linear-gradient(45deg, #1f9d57 0%, #28c76f 100%)',
+    focus: 'linear-gradient(45deg, #1f9d57 0%, #28c76f 100%)',
+  },
+  error: {
+    hover: 'linear-gradient(49.38deg, #ea5455 0.32%, #f08182 93.45%)',
+    active: 'linear-gradient(45deg, #e42728 0.32%, #ea5455 100%)',
+    focus: 'linear-gradient(45deg, #e42728 0.32%, #ea5455 100%)',
+  },
+  warning: {
+    hover: 'linear-gradient(48.12deg, #ffe143 1.18%, #ffbc0e 95.16%)',
+    active: 'linear-gradient(45deg, #ffe143 0.32%, #ffbc0e 100%)',
+    focus: 'linear-gradient(45deg, #ffe143 0.32%, #ffbc0e 100%)',
+  },
+  info: {
+    hover: 'linear-gradient(47.47deg, #00cfe8 1.18%, #03e4ff 96.09%)',
+    active: 'linear-gradient(45deg, #00b8cf 0.32%, #00cfe8 100%)',
+    focus: 'linear-gradient(45deg, #00b8cf 0.32%, #00cfe8 100%)',
+  },
+  dark: {
+    hover: 'linear-gradient(48.13deg, #4b4b4b 1.18%, #787878 94.3%)',
+    active: 'linear-gradient(44.76deg, #1e1e1e 1.18%, #4b4b4b 164.14%)',
+    focus: 'linear-gradient(44.76deg, #1e1e1e 1.18%, #4b4b4b 164.14%)',
+  },
+};
+
+export {
+  COLOR,
+  TRANSPARENT_COLOR,
+  GRADIENT_COLOR,
+  CONTAINED_BUTTON_COLOR,
+  OUTLINED_BUTTON_COLOR,
+  TEXT_BUTTON_COLOR,
+  GRADIENT_BUTTON_COLOR,
+  LINEAR_COLOR,
 };

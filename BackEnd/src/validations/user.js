@@ -13,8 +13,8 @@ const register = {
     name: Joi.string().trim().required(),
     username: Joi.string().trim().required(),
     password: Joi.string().trim().required(),
-    phone: Joi.string().trim().required(),
-    avatar: Joi.string().trim(),
+    phone: Joi.string().trim().optional(),
+    avatar: Joi.string().trim().optional(),
   }),
 };
 
