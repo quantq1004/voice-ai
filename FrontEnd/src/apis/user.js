@@ -1,12 +1,12 @@
 import api from './api';
 import { getToken } from '../utils/localStorage';
 
-const login = async (email, password) => {
+const login = async (username, password) => {
   try {
     const response = await api({
       method: 'POST',
       url: '/users/login',
-      data: { email, password },
+      data: { username, password },
     });
 
     return response;
@@ -15,12 +15,12 @@ const login = async (email, password) => {
   }
 };
 
-const register = async (name, email, password) => {
+const register = async (name, username, email, password) => {
   try {
     const response = await api({
       method: 'POST',
       url: '/users/register',
-      data: { name, email, password },
+      data: { name, username, email, password },
     });
     return response;
   } catch (error) {

@@ -24,6 +24,7 @@ import {
 
 const RegisterContainer = () => {
   const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isRegistered, setIsRegistered] = useState(false);
@@ -32,7 +33,7 @@ const RegisterContainer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await register(name, email, password);
+    const response = await register(name, username, email, password);
 
     if (!response) {
       enqueueSnackbar('Register failed', { variant: 'error' });
@@ -72,6 +73,18 @@ const RegisterContainer = () => {
                 autoFocus
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+              />
+            </Grid>
+            <Grid item xs={12}>
+              <TextField
+                autoComplete="given-name"
+                fullWidth
+                name="username"
+                required
+                id="username"
+                label="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </Grid>
             <Grid item xs={12}>

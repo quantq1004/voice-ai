@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import LoginPage from '../pages/Login';
 import RegisterPage from '../pages/Register';
+import HomePage from '../pages/Home';
 // import VoiceCloningPage from '../pages/VoiceCloning';
 // import VoiceCloningCreatePage from '../pages/VoiceCloningCreate';
 import AccountPage from '../pages/Account';
@@ -17,14 +18,14 @@ import { getToken } from '../utils/localStorage';
 const AppRouter = () => (
   <Router>
     <Routes>
-      {/* <Route
+      <Route
         path="/"
         element={
           <ProtectedRoute>
-            <VoiceCloningPage />
+            <HomePage />
           </ProtectedRoute>
         }
-      /> */}
+      />
       <Route
         path="/login"
         element={getToken() ? <Navigate to="/" /> : <LoginPage />}

@@ -44,8 +44,9 @@ const register = async ({ email, name, username, password, phone, avatar }) => {
   return user;
 };
 
-const login = async (email, password) => {
-  const user = await userDao.findUser({ email });
+const login = async (username, password) => {
+  const user = await userDao.findUserByUsername(username);
+
   if (!user) throw new CustomError(errorCodes.USER_NOT_FOUND);
 
   const isCorrectPassword = await comparePassword(password, user.password);
@@ -53,7 +54,7 @@ const login = async (email, password) => {
 
   const { isAdmin = false, _id: userId } = user;
   const accessToken = await generateAccessToken(userId, isAdmin);
-  return accessToken;
+  return { userId, accessToken };
 };
 
 const verifyAdmin = (accessToken) => {

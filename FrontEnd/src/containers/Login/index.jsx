@@ -27,7 +27,7 @@ import {
 } from './index.style';
 
 const LoginContainer = () => {
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLogined, setIsLogined] = useState(false);
 
@@ -35,7 +35,7 @@ const LoginContainer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await login(email, password);
+    const response = await login(username, password);
 
     if (!response) {
       enqueueSnackbar('Login failed', { variant: 'error' });
@@ -67,7 +67,7 @@ const LoginContainer = () => {
           <StyledTypography>
             Welcome to our
             <br />
-            English learning website!
+            Voice AI website!
           </StyledTypography>
           <StyledAvatar>
             <LockOutlinedIcon />
@@ -85,13 +85,13 @@ const LoginContainer = () => {
               margin="normal"
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id="username"
+              label="Username"
+              name="username"
+              autoComplete="username"
               autoFocus
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
             <TextField
               margin="normal"
