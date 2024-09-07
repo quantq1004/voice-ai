@@ -2,7 +2,7 @@ const { Joi, validate } = require('express-validation');
 
 const login = {
   body: Joi.object({
-    email: Joi.string().email().trim().lowercase().required(),
+    username: Joi.string().trim().required(),
     password: Joi.string().trim().required(),
   }),
 };

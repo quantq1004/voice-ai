@@ -18,8 +18,8 @@ const register = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const { email, password } = req.body;
-  const { userId, accessToken } = await authService.login(email, password);
+  const { username, password } = req.body;
+  const { userId, accessToken } = await authService.login(username, password);
   return res.send({ user: { userId, accessToken } });
 };
 
