@@ -37,8 +37,12 @@ module.exports = {
   },
   settings: {
     'import/resolver': {
+      node: {
+        paths: ['src'], // Make sure node resolves from 'src'
+        extensions: ['.js', '.jsx', '.json'],
+      },
       alias: {
-        map: [['@src', './src']],
+        map: [['@src', path.resolve(__dirname, 'src')]], // Correct path resolution
         extensions: ['.js', '.jsx', '.json'],
       },
     },

@@ -4,7 +4,7 @@ import { Box, Typography, Button } from '@mui/material';
 import { AddCircleRounded } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 import route from '@src/constants/route';
-import FirstVoiceBoxImg from '@src/assets/images/create-first-voice-box.svg';
+import FirstVoiceBoxImg from '@src/assets/images/new-voice.png';
 import { MOBILE_BREAKPOINT } from '@src/constants';
 import { StyledFirstVoice } from './index.style';
 import QRDialog from './QRDialog';

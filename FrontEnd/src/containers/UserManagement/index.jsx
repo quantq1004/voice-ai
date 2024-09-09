@@ -11,11 +11,11 @@ import {
   Button,
   Typography,
 } from '@mui/material';
-import { getUsers } from '../../apis/user';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import Copyright from '../../components/Copyright';
-import getErrorMessage from '../../errors/message';
+import { getUsers } from '@src/apis/user';
+import Header from '@src/components/Header';
+import Footer from '@src/components/Footer';
+import Copyright from '@src/components/Copyright';
+import getErrorMessage from '@src/errors/message';
 import { StyledBox, StyledTypography } from './index.style';
 
 const UserManagement = () => {

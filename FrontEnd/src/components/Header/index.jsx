@@ -7,7 +7,7 @@ import {
   ExitToApp,
   Settings,
 } from '@mui/icons-material';
-import { AuthContext } from '../../checkAdminContext';
+import { AuthContext } from '@src/checkAdminContext';
 import {
   StyledAvatar,
   StyledTypography,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { useSnackbar } from 'notistack';
+import { useDispatch } from 'react-redux';
 import {
   CssBaseline,
   TextField,
@@ -11,12 +11,15 @@ import {
   Box,
   Grid,
   Typography,
+  Backdrop,
+  CircularProgress,
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Copyright from '../../components/Copyright';
-import getErrorMessage from '../../errors/message';
-import { login } from '../../apis/user';
-import { setToken, setUserId } from '../../utils/localStorage';
+import actions from '@src/redux/actions';
+import Copyright from '@src/components/Copyright';
+import getErrorMessage from '@src/errors/message';
+import { login } from '@src/apis/user';
+import { setToken, setUserId } from '@src/utils/localStorage';
 import {
   StyledGrid,
   StyledBackgroundGrid,
@@ -27,24 +30,36 @@ import {
 } from './index.style';
 
 const LoginContainer = () => {
+  const dispatch = useDispatch();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [isLogined, setIsLogined] = useState(false);
-
-  const { enqueueSnackbar } = useSnackbar();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const response = await login(username, password);
 
-    if (!response) {
-      enqueueSnackbar('Login failed', { variant: 'error' });
-      return;
-    }
-
-    const errorMessage = getErrorMessage(response?.result?.code);
-    if (errorMessage) {
-      enqueueSnackbar(errorMessage, { variant: 'error' });
+    if (!response?.status) {
+      if (response.code) {
+        const errorMessage = getErrorMessage(response?.result?.code);
+        dispatch(
+          actions.noti.push({
+            severity: 'error',
+            message: errorMessage,
+          }),
+        );
+        setLoading(false);
+        return;
+      }
+      dispatch(
+        actions.noti.push({
+          severity: 'error',
+          message: 'createVoiceFailed',
+        }),
+      );
+      setLoading(false);
       return;
     }
 
@@ -60,6 +75,9 @@ const LoginContainer = () => {
 
   return (
     <StyledGrid className="mainContainer">
+      <Backdrop sx={{ zIndex: '9999999' }} open={loading}>
+        <CircularProgress />
+      </Backdrop>
       <CssBaseline />
       <StyledBackgroundGrid item xs={false} sm={4} md={7} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>

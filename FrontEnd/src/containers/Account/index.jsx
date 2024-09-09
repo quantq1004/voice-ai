@@ -3,12 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
 import { TextField, Box, Typography, Button } from '@mui/material';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
-import Copyright from '../../components/Copyright';
-import { removeToken, getUserId, removeUserId } from '../../utils/localStorage';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import getErrorMessage from '../../errors/message';
-import { updateUser, getUserDetails } from '../../apis/user';
+import Copyright from '@src/components/Copyright';
+import { removeToken, getUserId, removeUserId } from '@src/utils/localStorage';
+import Header from '@src/components/Header';
+import Footer from '@src/components/Footer';
+import getErrorMessage from '@src/errors/message';
+import { updateUser, getUserDetails } from '@src/apis/user';
 import {
   StyledBox,
   StyledTypography,

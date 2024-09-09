@@ -8,7 +8,7 @@ import {
 import LoginPage from '../pages/Login';
 import RegisterPage from '../pages/Register';
 import HomePage from '../pages/Home';
-// import VoiceCloningPage from '../pages/VoiceCloning';
+import VoicePage from '../pages/Voice';
 // import VoiceCloningCreatePage from '../pages/VoiceCloningCreate';
 import AccountPage from '../pages/Account';
 import UserManagementPage from '../pages/UserManagement';
@@ -23,6 +23,14 @@ const AppRouter = () => (
         element={
           <ProtectedRoute>
             <HomePage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/voice-cloning"
+        element={
+          <ProtectedRoute>
+            <VoicePage />
           </ProtectedRoute>
         }
       />

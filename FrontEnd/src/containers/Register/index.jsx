@@ -11,9 +11,9 @@ import {
   Box,
 } from '@mui/material';
 import PersonAddOutlinedIcon from '@mui/icons-material/PersonAddOutlined';
-import Copyright from '../../components/Copyright/index';
-import getErrorMessage from '../../errors/message';
-import { register } from '../../apis/user';
+import Copyright from '@src/components/Copyright/index';
+import getErrorMessage from '@src/errors/message';
+import { register } from '@src/apis/user';
 import {
   StyledContainer,
   StyledBox,

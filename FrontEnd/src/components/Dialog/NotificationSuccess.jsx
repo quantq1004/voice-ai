@@ -6,7 +6,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { Close } from '@mui/icons-material';
-import GiftImg from '@src/assets/images/gift.png';
+import GiftImg from '@src/assets/images/gift.jpg';
 
 import { StyledNotificationSuccess } from './index.style';
 
