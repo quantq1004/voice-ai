@@ -42,7 +42,7 @@ const LoginContainer = () => {
     const response = await login(username, password);
 
     if (!response?.status) {
-      if (response.code) {
+      if (response?.code) {
         const errorMessage = getErrorMessage(response?.result?.code);
         dispatch(
           actions.noti.push({
@@ -69,6 +69,7 @@ const LoginContainer = () => {
       if (accessToken) setToken(accessToken);
       if (userId) setUserId(userId);
     }
+    setLoading(false);
   };
 
   if (isLogined) window.location.href = '/';

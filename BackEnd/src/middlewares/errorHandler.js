@@ -39,7 +39,7 @@ const errorHandler = (err, req, res, next) => {
         status: 0,
         message,
         details,
-        error_code: code,
+        code,
       },
       { deep: true },
     ),

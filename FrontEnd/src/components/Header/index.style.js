@@ -12,8 +12,9 @@ export const StyledAvatar = styled(Avatar)`
   && {
     cursor: pointer;
     margin-left: 30px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    /* background-color: tan; */
     img {
       width: 60px;
       height: 60px;

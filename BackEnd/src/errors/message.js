@@ -28,6 +28,8 @@ const getErrorMessage = (code) => {
       return 'Call api create voice tts failed';
     case codes.USER_EXISTS:
       return 'User exists';
+    case codes.USER_NOT_FOUND:
+      return 'User not found';
     default:
       return null;
   }

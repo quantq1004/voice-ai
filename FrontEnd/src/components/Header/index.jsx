@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AppBar, Toolbar } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
+import LogoImg from '@src/assets/logo/logo.png';
 import {
   Notifications,
   AccountCircle,
@@ -49,8 +50,8 @@ const Header = ({ onLogout }) => {
   return (
     <AppBar>
       <Toolbar>
-        <StyledAvatar src="./logo.png" onClick={handleReturn} />
-        <StyledTypography onClick={handleReturn}>FlashCards</StyledTypography>
+        <StyledAvatar src={LogoImg} onClick={handleReturn} />
+        <StyledTypography onClick={handleReturn}>Voice AI</StyledTypography>
         <StyledBox className="customBox" />
         <StyledBox>
           <StyledIconButton>
