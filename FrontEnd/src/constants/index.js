@@ -1,7 +1,7 @@
 const MOBILE_BREAKPOINT = 768;
 
 const RESOURCE = {
-  USER: '/user',
+  USERS: '/users',
   VOICE_CLONING: '/voice-cloning',
 };
 

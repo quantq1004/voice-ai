@@ -1,3 +1,4 @@
+import { RESOURCE } from '@src/constants';
 import api from './api';
 import { getToken } from '../utils/localStorage';
 
@@ -5,7 +6,7 @@ const login = async (username, password) => {
   try {
     const response = await api({
       method: 'POST',
-      url: '/users/login',
+      url: `${RESOURCE}/login`,
       data: { username, password },
     });
 

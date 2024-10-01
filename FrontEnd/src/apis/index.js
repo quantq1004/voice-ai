@@ -1,4 +1,4 @@
-import * as voiceCloning from './voiceCloning';
 import * as user from './user';
+import * as voice from './voice';
 
-export default { voiceCloning, user };
+export default { user, voice };
