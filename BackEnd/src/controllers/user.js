@@ -25,7 +25,7 @@ const login = async (req, res) => {
 
 const getUserById = async (req, res) => {
   const { id } = req.params;
-  let user = await userDao.getUserById(id);
+  let user = await userDao.findUserById(id);
   if (user.toObject) user = user.toObject();
   delete user.password;
   return res.send({ user });
